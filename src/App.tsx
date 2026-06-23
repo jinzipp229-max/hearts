@@ -147,6 +147,19 @@ export default function App() {
         )}
       </AnimatePresence>
     </div>
+
+    <div style={{ position: 'relative', width: '100vw', height: '100vh', overflow: 'hidden' }}>
+  {/* Flow field sits behind everything */}
+  <div style={{ position: 'absolute', inset: 0, zIndex: 0 }}>
+    <FlowFieldBackground />
+  </div>
+
+  {/* Your existing hearts content goes here */}
+  <div style={{ position: 'relative', zIndex: 1 }}>
+    {/* paste your existing JSX here */}
+  </div>
+</div>
+
   );
 }
 
